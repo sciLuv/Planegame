@@ -1,0 +1,323 @@
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1, p {
+  color: white;
+}
+
+h4 {
+  font-family: OCR A Std;
+  color : #bfbfbf ;
+}
+
+#test{
+  color : white
+}
+
+#core {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.begingame {
+  display: flex; justify-content: center;  flex-direction: column;
+  width: 205px; font-size: 16px;
+  margin-right: 10px; margin-top: 40px;
+}
+
+#score{
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  margin-left: 10px; margin-top: 40px; font-family: OCR A Std; font-size: 27px;
+}
+
+/* grille déplacement avion et ses composants */
+
+#grid2Content {width: 100%; position: absolute; top: 43px; display: flex; justify-content: center;}
+#grid2 { display: flex;}
+
+.grid2Case {
+  width: 30px; height: 30px; overflow: auto;
+/*  border-bottom: 2px green solid; border-right: 2px green solid; background-color: none ; */
+}
+
+#grid2Column0, #grid2Column1, #grid2Column2, #grid2Column3, #grid2Column4, #grid2Column5{ background-color: black; width: 1px; height: 1px;}
+
+
+#grid2CaseColumn12_case12{ background-image: url('img/testplane.png');  }
+
+/* Grille fumée et ses composant*/
+
+#grid3Content {width: 100%; position: absolute; top: 43px; display: flex; justify-content: center;}
+#grid3 { display: flex;}
+
+.grid3Case {
+  width: 30px; height: 30px; overflow: auto;
+/*  border-bottom: 2px green solid; border-right: 2px green solid; background-color: none ; */
+}
+
+#grid3Column0, #grid3Column1, #grid3Column2, #grid3Column3, #grid3Column4, #grid3Column5{ background-color: black; width: 1px; height: 1px;}
+
+.smoke {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smokeType1{
+  height: 20px;
+  width: 20px;
+  background-color: #979A9A;
+  border-radius: 50px;
+  border-left: 5px #7B7D7D solid;
+  border-bottom: 5px #7B7D7D solid;
+}
+.smokeType2{
+  height: 25px;
+  width: 25px;
+  background-color: #979A9A;
+  border-radius: 50px;
+  border-left: 4px #7B7D7D solid;
+  border-bottom: 4px #7B7D7D solid;
+}
+.smokeType3{
+  height: 17px;
+  width: 17px;
+  background-color: #979A9A;
+  border-radius: 50px;
+  border-left: 6px #7B7D7D solid;
+  border-bottom: 6px #7B7D7D solid;
+}
+.smokeType4{
+  background-color: #979A9A;
+  border-radius: 50px;
+}
+
+/* Grille oiseaux et ses composants*/
+
+#grid4Content {width: 100%; position: absolute; top: 43px; display: flex; justify-content: center;}
+#grid4 { display: flex;}
+
+.grid4Case {
+  width: 30px; height: 30px; overflow: auto;
+/*  border-bottom: 2px green solid; border-right: 2px green solid; background-color: none ; */
+}
+
+#grid4Column0, #grid4Column1, #grid4Column2, #grid4Column3, #grid4Column4, #grid4Column5{ background-color: black; width: 1px; height: 1px; visibility: hidden;}
+
+
+/* grille scrolling arriere plans et ses composants */
+
+#grid { display: flex; background-image: url('img/background.png'); }
+
+.case {
+  width: 30px; height: 30px; background-size: 30px;
+/*  border-bottom: 2px red solid; border-right: 2px red solid; background-color: none ; */
+}
+
+.case0{background-color: #7bbff9;}
+.case1{background-color: #76aff6;}
+.case2{background-color: #6fa4f2;}
+.case3{background-color: #699eed;}
+
+.case13{background-color: #5f91e3;}
+.case14{background-color: #5e8ae9;}
+.case15{background-color: #5d7cf0;}
+
+#bordering {
+  width: 30px;
+  height: 30px;
+  background-color: peru;
+  display: flex;
+}
+
+#borderingLeft {
+  width: 30px;
+  height: 30px;
+  background-color: peru;
+}
+
+#borderingRight {
+  width: 30px;
+  height: 30px;
+  background-color: peru;
+}
+
+#insideBordering {
+  width: 30px; height: 30px; border-radius: 0px 0px 15px 15px;
+  background-color: cornflowerblue;
+}
+#insideBordering2 {
+  width: 30px; height: 30px; border-radius: 0px 0px 15px 15px;
+  background-color: #5f91e3;
+}
+#insideBordering3 {
+  width: 30px; height: 30px; border-radius: 0px 0px 15px 15px;
+  background-color: #5e8ae9;
+}
+#insideBordering4 {
+  width: 30px; height: 30px; border-radius: 0px 0px 15px 15px;
+  background-color: #5d7cf0;
+}
+
+
+#insideBorderingRight {
+  width: 30px; height: 30px; border-radius: 0px 0px 15px 0px;
+  background-color: cornflowerblue;
+}
+#insideBorderingRight2 {
+  width: 30px; height: 30px; border-radius: 0px 0px 15px 0px;
+  background-color: #5f91e3;
+}
+#insideBorderingRight3 {
+  width: 30px; height: 30px; border-radius: 0px 0px 15px 0px;
+  background-color: #5e8ae9;
+}
+#insideBorderingRight4 {
+  width: 30px; height: 30px; border-radius: 0px 0px 15px 0px;
+  background-color: #5d7cf0;
+}
+
+
+#insideBorderingLeft {
+  width: 30px; height: 30px; border-radius: 0px 0px 0px 15px;
+  background-color: cornflowerblue;
+}
+#insideBorderingLeft2 {
+  width: 30px; height: 30px; border-radius: 0px 0px 0px 15px;
+  background-color: #5f91e3;
+}
+#insideBorderingLeft3 {
+  width: 30px; height: 30px; border-radius: 0px 0px 0px 15px;
+  background-color: #5e8ae9;
+}
+#insideBorderingLeft4 {
+  width: 30px; height: 30px; border-radius: 0px 0px 0px 15px;
+  background-color: #5d7cf0;
+}
+
+
+/*les different arrondie des nuages  */
+#borderingCloud {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  display: flex;
+}
+
+
+#insideBorderingCloudLeft {
+  width: 30px; height: 30px; border-radius: 30px 0px 0px 30px;
+  background-color: cornflowerblue;
+  }
+#insideBorderingCloudLeft2 {
+  width: 30px; height: 30px; border-radius: 30px 0px 0px 30px;
+  background-color: #76aff6;
+  }
+#insideBorderingCloudLeft3 {
+  width: 30px; height: 30px; border-radius: 30px 0px 0px 30px;
+  background-color: #6fa4f2;
+  }
+#insideBorderingCloudLeft4 {
+  width: 30px; height: 30px; border-radius: 30px 0px 0px 30px;
+  background-color: #699eed;
+  }
+
+
+
+#insideBorderingCloudRight {
+  width: 30px; height: 30px; border-radius: 0px 30px 30px 0px;
+  background-color: cornflowerblue;
+}
+#insideBorderingCloudRight2 {
+  width: 30px; height: 30px; border-radius: 0px 30px 30px 0px;
+  background-color: #76aff6;
+}
+#insideBorderingCloudRight3 {
+  width: 30px; height: 30px; border-radius: 0px 30px 30px 0px;
+  background-color: #6fa4f2;
+}
+#insideBorderingCloudRight4 {
+  width: 30px; height: 30px; border-radius: 0px 30px 30px 0px;
+  background-color: #699eed;
+}
+
+
+#insideBorderingCloudUpLeft {
+  width: 30px; height: 30px; border-radius: 30px 0px 0px 0px;
+  background-color: cornflowerblue;
+  }
+#insideBorderingCloudUpLeft2 {
+  width: 30px; height: 30px; border-radius: 30px 0px 0px 0px;
+  background-color: #76aff6;
+  }
+#insideBorderingCloudUpLeft3 {
+  width: 30px; height: 30px; border-radius: 30px 0px 0px 0px;
+  background-color: #6fa4f2;
+  }
+#insideBorderingCloudUpLeft4 {
+  width: 30px; height: 30px; border-radius: 30px 0px 0px 0px;
+  background-color: #699eed;
+  }
+
+
+#insideBorderingCloudUpRight {
+  width: 30px; height: 30px; border-radius: 0px 30px 0px 0px;
+  background-color: cornflowerblue;
+  }
+#insideBorderingCloudUpRight2 {
+  width: 30px; height: 30px; border-radius: 0px 30px 0px 0px;
+  background-color: #76aff6;
+  }
+#insideBorderingCloudUpRight3 {
+  width: 30px; height: 30px; border-radius: 0px 30px 0px 0px;
+  background-color: #6fa4f2;
+  }
+#insideBorderingCloudUpRight4 {
+  width: 30px; height: 30px; border-radius: 0px 30px 0px 0px;
+  background-color: #699eed;
+  }
+
+
+#insideBorderingCloudDownLeft {
+  width: 30px; height: 30px; border-radius: 0px 0px 0px 30px;
+  background-color: cornflowerblue;
+  }
+#insideBorderingCloudDownLeft2 {
+  width: 30px; height: 30px; border-radius: 0px 0px 0px 30px;
+  background-color: #76aff6;
+  }
+#insideBorderingCloudDownLeft3 {
+  width: 30px; height: 30px; border-radius: 0px 0px 0px 30px;
+  background-color: #6fa4f2;
+  }
+#insideBorderingCloudDownLeft4 {
+  width: 30px; height: 30px; border-radius: 0px 0px 0px 30px;
+  background-color: #699eed;
+  }
+
+
+#insideBorderingCloudDownRight {
+  width: 30px; height: 30px; border-radius: 0px 0px 30px 0px;
+  background-color: cornflowerblue;
+  }
+#insideBorderingCloudDownRight2 {
+  width: 30px; height: 30px; border-radius: 0px 0px 30px 0px;
+  background-color: #76aff6;
+  }
+#insideBorderingCloudDownRight3 {
+  width: 30px; height: 30px; border-radius: 0px 0px 30px 0px;
+  background-color: #6fa4f2;
+  }
+#insideBorderingCloudDownRight4 {
+  width: 30px; height: 30px; border-radius: 0px 0px 30px 0px;
+  background-color: #699eed;
+  }
+
+#column0, #column1, #column2, #column3, #column4, #column5{ visibility: hidden; width: 1px; height: 1px;}
